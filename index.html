@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=https://jam-p.com/" />      
+    <!-- <meta http-equiv="refresh" content="0;url=https://jam-p.com/"/> -->
     <link rel="canonical" href="https://jam-p.com/" />
     <title>JAM</title>
+    <script>
+        var params = location.href.split("?")[1];
+        var path = "https://jam-p.com/";
+        if(typeof(params) !="undefined") {
+            path = path + "?" + params;
+        }
+        var meta_str = "<meta http-equiv='refresh'content='0; URL=" + path + "'>";
+        $("head").prepend(meta_str);
+    </script>
     <style>
         p {
             margin: 40px;
